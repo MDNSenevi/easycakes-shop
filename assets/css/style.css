@@ -192,7 +192,7 @@ header {
      padding-bottom: var(--medium);
 }
 
-.nav-menu.hide {
+.nav-menu.desktop {
      right: 100vw;
 }
 
@@ -298,6 +298,13 @@ p.disclaimer {
 
      header {
           grid-column: span 12;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          padding-bottom: 0;
+
      }
 
      main {
@@ -360,4 +367,29 @@ p.disclaimer {
           grid-column: span 12;
      }
 
+     .icon.mobile {
+          display: none;
+     }
+
+     .nav-menu.desktop {
+          right: 0;
+
+          flex-direction: row;
+
+          background-color: inherit;
+
+          height: fit-content;
+          width: fit-content;
+          gap: inherit;
+
+          position:relative;
+
+          justify-content: space-between;
+
+     }
+
+     .desktop ul li {
+          display: inline-block;
+          margin-right: var(--medium);
+     }
 }
