@@ -19,11 +19,18 @@
 </head>
 <body>
      <header>
-          <img class="logomark" src="assets/images/easycakes-logo.svg" alt="Logo for easycakes - shows a line drawing of a cupcake">
-          <span class="wordmark">easycakes</span>
-          <nav>
-               <a href="" class="icon">
+          <div class="masthead">
+               <div class="logo">
+                    <img class="logomark" src="assets/images/easycakes-logo.svg" alt="Logo for easycakes - shows a line drawing of a cupcake">
+                    <span class="wordmark">easycakes</span>
+               </div>
+               <a href="#" class="icon menu mobile">
                     <svg><use href="assets/images/icons.svg#menu-icon" /></svg>
+               </a>
+          </div>
+          <nav class="nav-menu hide">
+               <a href="#" class="icon close">
+                    <svg><use href="assets/images/icons.svg#close-icon" /></svg>
                </a>
                <ul>
                     <li><a href="index.html">Home</a></li>
@@ -32,13 +39,45 @@
                </ul>
           </nav>
      </header>
-     <main></main>
+     <main>
+          <section class="hero">
+               <img class="hero-img" src="assets/images/hero-cupcake.jpeg" alt="Cupcakes with sprinkles">
+               <div class="hero-content">
+                   <h1>Easy cakes</h1>
+                   <p class="descriptor">We make and deliver lovely cupcakes to you so you can sit back and enjoy! </p> 
+               </div>
+          </section>
+          <section class="cupcakes">
+               <h2>Favourites</h2>
+               <div class="card">
+                    <img class="card-img" src="assets/images/gingerbread-cupcake.jpeg" alt="Festive Cupcake with Sprinkles and Ornaments">
+                    <p class="card-desc">Ginger Spice</p>
+                    <p class="card-price">$5.00</p>
+                    <a class="" href="#">Order</a>
+               </div>
+               <div class="card">
+                    <img class="card-img top-align" src="assets/images/chocolate-cupcake.jpeg" alt="Festive Cupcake with Sprinkles and Ornaments">
+                    <p class="card-desc">Chocolate Delight </p>
+                    <p class="card-price">$5.00</p>
+                    <a class="" href="#">Order</a>
+               </div>
+               <div class="card">
+                    <img class="card-img top-align" src="assets/images/raspberry-cupcake.jpeg" alt="Festive Cupcake with Sprinkles and Ornaments">
+                    <p class="card-desc">Raspberry Spring</p>
+                    <p class="card-price">$5.00</p>
+                    <a class="" href="#">Order</a>
+               </div>
+          </section>
+
+     </main>
      <footer>
-          <ul>
-               <li><a href="index.html">Home</a></li>
-               <li><a href="cupcakes.html">Our Cupcakes</a></li>
-               <li><a href="about.html">About</a></li>
-          </ul>
+          <nav class="menu">
+               <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cupcakes.html">Our Cupcakes</a></li>
+                    <li><a href="about.html">About</a></li>
+               </ul>
+          </nav>
           <p class="disclaimer">This website is a student project created for
                educational purposes only.</p>
      </footer>

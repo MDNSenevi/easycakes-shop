@@ -1,0 +1,291 @@
+/* GLOBAL VARIABLES */
+:root {
+     /* Primary colour */
+     --salmon-pink: #fc9d9b;
+     --apricot: #ffccad;
+     --cam-blue: #84af9b;
+     --black: #1e212b;
+     --white: #fefbf9;
+
+     /* Typography */
+     --ec-font-family: "Montserrat", sans-serif;
+
+     /* Typescale */
+     --h1: 2.5rem;
+     --h2: 1.9882rem;
+     --h3: 1.5811rem;
+     --h4: 1.2574rem;
+     --h5: 1.138rem;
+     --h6: 1.067rem;
+     --tSmall: 0.7368rem;
+
+     /* Spacings */
+     --base: 1rem;
+
+     --x-small: 0.25rem;
+     --small: 0.5rem;
+     --medium: 1.5rem;
+     --large: 2rem;
+     --x-large: 3rem;
+}
+
+/* GLOBAL STYLES */
+* {
+     box-sizing: border-box;
+     margin: 0;
+     /* padding: 0; */
+}
+
+html {
+     font-size: 100%;
+     background-color: var(--white);
+}
+
+body {
+     font-family: var(--ec-font-family);
+     
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: var(--large);
+
+     position: relative;
+
+
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+     font-family: var(--ec-font-family);
+}
+
+h1 {
+     font-size: var(--h1);
+     color: var(--purple);
+     font-weight: 700;
+}
+
+h2 {
+     font-size: var(--h2);
+     margin-bottom: var(--small);
+     margin-top: var(--small);
+     font-weight: 700;
+}
+
+h3 {
+     font-size: var(--h3);
+     font-style: italic;
+     margin-bottom: var(--small);
+     margin-top: var(--small);
+     font-weight: 600;
+}
+
+h4 {
+     font-size: var(--h4);
+     font-weight: 600;
+
+     margin-bottom: var(--x-small);
+     margin-top: var(--x-small);
+}
+
+a {
+     color: inherit;
+}
+
+img {
+     display: block;
+}
+
+/* HEADER */
+.logo {
+     display: flex;
+     align-items: center;
+
+     position: relative;
+}
+
+.logomark {
+     color: var(--cam-blue);
+     width: var(--large);
+     height: var(--large);
+}
+
+.wordmark {
+     text-transform: uppercase;
+     font-weight: 700;
+     letter-spacing: 0.125rem;
+
+     color: var(--black);
+
+     position: relative;
+     top: 3px;
+
+     margin-left: var(--x-small);
+}
+
+header {
+     grid-column: span 2;
+
+     position: relative;
+
+     padding: var(--large);
+}
+
+.masthead {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.masthead .icon.menu {
+     position: relative;
+     top: 3px;;
+}
+
+.icon svg {
+     max-width: var(--large);
+     max-height: var(--large);
+}
+
+/* Navigation */
+
+.nav-menu {
+     display: flex;
+     flex-direction: column;
+     gap: var(--large);
+     position: absolute;
+     top: 0;
+     right: 0;
+     /* left: 100vw; */
+
+     z-index: 12;
+
+     background-color: var(--apricot);
+     width: 70vw;
+     height: 100vh;
+
+     /* margin: -2rem; */
+     padding: var(--large);
+
+     color: var(--cream);
+}
+
+.nav-menu .icon {
+     align-self: flex-end;
+}
+
+.nav-menu a {
+     text-decoration: none;
+     font-size: var(--h4);
+     text-align: center;
+
+     display: block;
+}
+
+.nav-menu ul {
+     padding: 0;
+}
+
+.nav-menu ul li {
+     list-style: none;
+     margin-bottom: var(--medium);
+     padding-top: var(--medium);
+     padding-bottom: var(--medium);
+}
+
+.nav-menu.hide {
+     right: 100vw;
+}
+
+.nav-menu .current {
+     background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* MAIN */
+main {
+     grid-column: span 2;
+
+     padding-left: var(--large);
+     padding-right: var(--large);
+}
+
+section {
+     margin-bottom: var(--large);
+}
+
+.hero {
+     display: flex;
+     flex-direction: column;
+     position: relative;
+}
+
+.hero-content {
+     position: absolute;
+     top: 10vh;
+
+     /* color: var(--white); */
+}
+
+
+.hero-img {
+     margin-left: -2rem;
+     margin-right: -2rem;
+     width: 390px;
+     height: 390px;
+
+     object-position: left 15% top 15%;
+}
+
+.hero img, .card-img {
+     object-fit: cover;
+}
+
+.card {
+     display: flex;
+     flex-direction: column;
+     gap: var(--small);
+
+     margin-bottom: var(--medium);
+}
+
+.card-img {
+     width: 100%;
+     height: 390px;
+     
+}
+
+.card-img.top-align {
+     object-position: left 0% bottom -25%;
+}
+
+.card-desc {
+     font-weight: 600;
+}
+
+
+
+/* FOOTER */
+
+footer {
+     background-color: var(--cam-blue);
+     grid-column: span 2;
+
+     /* margin: 2rem -2rem 2rem -2rem; */
+     padding: var(--large);
+
+     color: var(--white);
+}
+
+footer nav ul {
+     list-style: none;
+     padding: 0;
+     margin-bottom: var(--large);
+}
+
+footer nav ul li {
+     margin-bottom: var(--small);
+}
+
+p.disclaimer {
+     font-size: var(--tSmall);
+     text-align: center;
+}
